@@ -51,7 +51,9 @@ try {
 
 	// Compute the output
 	const output = integers.map(toPhonetic);
-	console.log("Output:", output);
+
+	// Prepare output
+	console.log(output.reduce((str, phonetic) => str + "," + phonetic));
 } catch (error) {
 	console.error("Error: please input only integer values.");
 }
